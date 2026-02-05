@@ -1,0 +1,68 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4; /* Light gray background */
+    color: #333; /* Dark gray text */
+    line-height: 1.6;
+}
+
+/* Contact container styling */
+.condiv {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    background: #fff; /* White background for the contact section */
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    text-align: center;
+}
+
+.condiv h1 {
+    font-size: 2.5rem;
+    color: #009688; /* Teal color for the heading */
+    margin-bottom: 10px;
+}
+
+.condiv p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    color: #555; /* Softer gray for the paragraph */
+}
+
+/* List styling */
+.condiv ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.condiv ul li {
+    font-size: 1.2rem;
+    margin: 15px 0;
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Space between icon and text */
+    color: #333;
+}
+
+.condiv ul li i {
+    font-size: 1.5rem; /* Icon size */
+    color: #009688; /* Teal color for icons */
+}
+
+.condiv ul li a {
+    text-decoration: none;
+    color: #009688; /* Teal color for links */
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.condiv ul li a:hover {
+    color: #005f56; /* Darker teal on hover */
+}
+
+.condiv ul li span {
+    font-weight: bold;
+    color: #555; /* Softer gray for labels */
+}
