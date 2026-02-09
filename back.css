@@ -180,3 +180,12 @@
 .footer-links a:hover {
     color: #fff;
 }
+/* Optimization for Mobile Performance */
+@media (max-width: 768px) {
+    .banner, .main-container, .contact-container {
+        /* Standard scroll is much faster for mobile processors */
+        background-attachment: scroll !important;
+        /* Ensures the image doesn't look stretched when scrolling */
+        background-size: cover;
+    }
+}
