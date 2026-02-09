@@ -10,6 +10,9 @@
 </head>
 <body>
     <div class="banner">
+        <div id="preloader">
+    <div class="loader"></div>
+</div>
         <nav class="navbar">
             <div class="logo">DJ</div> <ul>
                 <li><a href="index.html"><i class="fas fa-home"></i> HOME</a></li>
@@ -33,5 +36,15 @@
         <a href="https://wa.me/254705074141" target="_blank"><i class="fab fa-whatsapp"></i></a>
     </div>
 </footer>
+<script>
+    window.addEventListener("load", function() {
+        const preloader = document.getElementById("preloader");
+        preloader.classList.add("loader-fade");
+        // Remove from DOM after fade out
+        setTimeout(() => {
+            preloader.style.display = "none";
+        }, 500);
+    });
+</script>
 </body>
 </html>

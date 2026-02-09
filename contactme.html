@@ -10,6 +10,9 @@
 </head>
 <body>
     <div class="contact-container">
+        <div id="preloader">
+    <div class="loader"></div>
+</div>
         <nav class="navbar">
             <div class="logo">DJ</div>
             <ul>
@@ -61,6 +64,16 @@
             </div>
         </main>
     </div>
+    <script>
+    window.addEventListener("load", function() {
+        const preloader = document.getElementById("preloader");
+        preloader.classList.add("loader-fade");
+        // Remove from DOM after fade out
+        setTimeout(() => {
+            preloader.style.display = "none";
+        }, 500);
+    });
+</script>
 </body>
 <footer class="footer">
     <p>&copy; 2026 Davis M. Juma. All Rights Reserved.</p>
