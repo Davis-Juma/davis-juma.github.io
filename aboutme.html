@@ -1,51 +1,71 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Me - Davis Juma</title>
-    <link rel="stylesheet" href="abaoutme.css">
-    <!-- Link to Font Awesome for icons -->
+    <title>About Me | Davis Juma</title>
+    <link rel="stylesheet" href="aboutme.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
-    <header class="header">
-        <h1>About Me</h1>
-        <p>Welcome to my portfolio! Learn more about my qualifications, skills, and programming expertise.</p>
-    </header>
-    <main class="content">
-        <section class="section">
-            <h2><i class="fas fa-graduation-cap"></i> Academic Qualifications</h2>
-            <p>I'm a Diploma holder in the field of Computer Science.</p>
-        </section>
-        <section class="section">
-            <h2><i class="fas fa-tools"></i> Skills</h2>
-            <p>As part of my qualifications, I have developed the following skills:</p>
+    <div class="main-container">
+        <nav class="navbar">
+            <div class="logo">DJ</div>
             <ul>
-                <li>Designing and Product Promotion Video Editing</li>
-                <li>Programming and Coding</li>
-                <li>Web Design</li>
-                <li>Cybersecurity</li>
-                <li>Graphic Design</li>
-                <li>Animations</li>
-                <li>Media Editing (e.g., business posters, campaign posters, brochures, invitations, video editing, calendars, books, tracts, etc.)</li>
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="aboutme.html" class="active">ABOUT</a></li>
+                <li><a href="contactme.html">CONTACT</a></li>
             </ul>
-        </section>
-        <section class="section">
-            <h2><i class="fas fa-code"></i> Programming Details</h2>
-            <p>I specialize in Frontend Development and also in backend, have expertise in the following programming languages:</p>
-            <ul>
-                <li>HTML5</li>
-                <li>CSS</li>
-                <li>JavaScript</li>
-                <li>Python</li>
-                <li>Java</li>
-                <li>SQl</li>
-                <li>Visual Basics(C#),Windows Form</li>
+        </nav>
 
-            </ul>
-            <p>I am also proficient in frontend frameworks, including React.js.</p>
-        </section>
-    </main>
+        <header class="about-header">
+            <h1>ABOUT ME</h1>
+            <p>Diploma in Computer Science | Full-Stack Developer</p>
+        </header>
+
+        <main class="about-grid">
+            <section class="profile-card">
+                <div class="profile-img-container">
+                    <img src="dhlfblc_082624 (1).jpg" alt="Davis Juma">
+                </div>
+                <h3>Davis M. Juma</h3>
+                <p>Specializing in AI, Frontend, and Cybersecurity.</p>
+            </section>
+
+            <div class="details-container">
+                <section class="info-section">
+                    <h2><i class="fas fa-graduation-cap"></i> Qualifications</h2>
+                    <p>I hold a Diploma in Computer Science, providing me with a deep understanding of software architecture and problem-solving.</p>
+                </section>
+
+                <section class="info-section">
+                    <h2><i class="fas fa-code"></i> Tech Stack</h2>
+                    <div class="tags">
+                        <span>HTML5</span> <span>CSS3</span> <span>JavaScript</span> 
+                        <span>Python</span> <span>Java</span> <span>SQL</span> 
+                        <span>C#</span> <span>React.js</span>
+                    </div>
+                </section>
+
+                <section class="info-section">
+                    <h2><i class="fas fa-tools"></i> Expert Skills</h2>
+                    <ul>
+                        <li><i class="fas fa-check-circle"></i> Web Design & Development</li>
+                        <li><i class="fas fa-check-circle"></i> Cybersecurity Analysis</li>
+                        <li><i class="fas fa-check-circle"></i> Video Editing & Motion Graphics</li>
+                        <li><i class="fas fa-check-circle"></i> Graphic Design (Branding & Posters)</li>
+                    </ul>
+                </section>
+            </div>
+        </main>
+    </div>
+    <footer class="footer">
+    <p>&copy; 2026 Davis M. Juma. All Rights Reserved.</p>
+    <div class="footer-links">
+        <a href="https://github.com/Davis-Juma" target="_blank"><i class="fab fa-github"></i></a>
+        <a href="https://wa.me/254705074141" target="_blank"><i class="fab fa-whatsapp"></i></a>
+    </div>
+</footer>
 </body>
 </html>
