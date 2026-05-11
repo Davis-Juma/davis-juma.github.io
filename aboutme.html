@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,13 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Me | Davis Juma</title>
     <link rel="stylesheet" href="aboutme.css">
-    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
+    <div id="preloader">
+        <div class="loader"></div>
+    </div>
+
     <div class="main-container">
-        <div id="preloader">
-    <div class="loader"></div>
-</div>
         <nav class="navbar">
             <div class="logo">DJ</div>
             <ul>
@@ -24,62 +24,88 @@
 
         <header class="about-header">
             <h1>ABOUT ME</h1>
-            <p>Diploma in Computer Science | Full-Stack Developer</p>
+            <p>Diploma in Computer Science | Systems Architect & Cyber Analyst</p>
         </header>
 
         <main class="about-grid">
-            <section class="profile-card">
+            <aside class="profile-card">
                 <div class="profile-img-container">
                     <img src="dhlfblc_082624 (1).jpg" alt="Davis Juma">
                 </div>
                 <h3>Davis M. Juma</h3>
-                <p>Specializing in AI, Frontend, and Cybersecurity.</p>
-            </section>
+                <p>Developing intelligent solutions at the intersection of AI, Security, and Healthcare.</p>
+                <div class="location-badge">
+                    <i class="fas fa-map-marker-alt"></i> Kitale, Kenya
+                </div>
+            </aside>
 
             <div class="details-container">
                 <section class="info-section">
-                    <h2><i class="fas fa-graduation-cap"></i> Qualifications</h2>
-                    <p>I hold a Diploma in Computer Science, providing me with a deep understanding of software architecture and problem-solving.</p>
+                    <h2><i class="fas fa-graduation-cap"></i> Academic Profile</h2>
+                    <p>Pursuing a <strong>Diploma in Computer Science</strong>. Focused on building robust software architectures, database management, and exploring the ethical frontiers of Artificial Intelligence.</p>
                 </section>
 
                 <section class="info-section">
                     <h2><i class="fas fa-code"></i> Tech Stack</h2>
                     <div class="tags">
-                        <span>HTML5</span> <span>CSS3</span> <span>JavaScript</span> 
-                        <span>Python</span> <span>Java</span> <span>SQL</span> 
-                        <span>C#</span> <span>React.js</span>
+                        <span>VB.NET</span> <span>Python (AI/ML)</span> <span>SQL</span> 
+                        <span>Java</span> <span>C#</span> <span>C++</span>
+                        <span>React.js</span> <span>JavaScript</span> <span>HTML5/CSS3</span>
+                        <span>Linux (Kali/Tails)</span> <span>Git/GitHub</span>
                     </div>
                 </section>
 
                 <section class="info-section">
-                    <h2><i class="fas fa-tools"></i> Expert Skills</h2>
-                    <ul>
-                        <li><i class="fas fa-check-circle"></i> Web Design & Development</li>
-                        <li><i class="fas fa-check-circle"></i> Cybersecurity Analysis</li>
-                        <li><i class="fas fa-check-circle"></i> Video Editing & Motion Graphics</li>
-                        <li><i class="fas fa-check-circle"></i> Graphic Design (Branding & Posters)</li>
+                    <h2><i class="fas fa-tools"></i> Expert Competencies</h2>
+                    <ul class="skills-list">
+                        <li>
+                            <i class="fas fa-hospital-user"></i>
+                            <div>
+                                <strong>Health Information Systems</strong>
+                                <p>Designing management systems (PIMS) for clinical environments, prioritizing data integrity and SQL optimization.</p>
+                            </div>
+                        </li>
+                        <li>
+                            <i class="fas fa-brain"></i>
+                            <div>
+                                <strong>AI & Computer Vision</strong>
+                                <p>Implementing object detection and autonomous logic modules for agricultural and security applications.</p>
+                            </div>
+                        </li>
+                        <li>
+                            <i class="fas fa-shield-halved"></i>
+                            <div>
+                                <strong>Cybersecurity Analysis</strong>
+                                <p>Specializing in system hardening, network monitoring, and privacy-first OS deployment (Tails/Kali).</p>
+                            </div>
+                        </li>
+                        <li>
+                            <i class="fas fa-layer-group"></i>
+                            <div>
+                                <strong>Full-Stack Development</strong>
+                                <p>Creating responsive web interfaces with modern frameworks and glassmorphism design principles.</p>
+                            </div>
+                        </li>
                     </ul>
                 </section>
             </div>
         </main>
     </div>
+
     <footer class="footer">
-    <p>&copy; 2026 Davis M. Juma. All Rights Reserved.</p>
-    <div class="footer-links">
-        <a href="https://github.com/Davis-Juma" target="_blank"><i class="fab fa-github"></i></a>
-        <a href="https://wa.me/254705074141" target="_blank"><i class="fab fa-whatsapp"></i></a>
-    </div>
-</footer>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-<script>
-    window.addEventListener("load", function() {
-        const preloader = document.getElementById("preloader");
-        preloader.classList.add("loader-fade");
-        // Remove from DOM after fade out
-        setTimeout(() => {
-            preloader.style.display = "none";
-        }, 500);
-    });
-</script>
+        <p>&copy; 2026 Davis M. Juma. System Version 1.0.0-ALPHA</p>
+        <div class="footer-links">
+            <a href="https://github.com/Davis-Juma" target="_blank"><i class="fab fa-github"></i></a>
+            <a href="https://wa.me/254705074141" target="_blank"><i class="fab fa-whatsapp"></i></a>
+        </div>
+    </footer>
+
+    <script>
+        window.addEventListener("load", function() {
+            const preloader = document.getElementById("preloader");
+            preloader.classList.add("loader-fade");
+            setTimeout(() => { preloader.style.display = "none"; }, 500);
+        });
+    </script>
 </body>
 </html>

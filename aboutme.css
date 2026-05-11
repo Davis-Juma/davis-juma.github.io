@@ -1,190 +1,152 @@
-/* * Copyright (c) 2026 Davis M. Juma. 
- * All rights reserved.
- * Professional Stylesheet for Davis Juma Portfolio.
+/* * Professional Stylesheet for Davis Juma Portfolio 
+ * (c) 2026 
  */
 
 * {
     margin: 0;
     padding: 0;
-}
-* {
-    margin: 0;
-    padding: 0;
     box-sizing: border-box;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
 }
 
-/* --- Main Background Section --- */
+body {
+    background: #000;
+}
+
 .main-container {
     width: 100%;
     min-height: 100vh;
-    /* This line now uses your professional office photo! */
-    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url("dhlfblc_082624 (1).jpg");
+    background: linear-gradient(rgba(0,0,0,0.85), rgba(0,0,0,0.85)), url("dhlfblc_082624 (1).jpg");
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
     color: #fff;
     padding-bottom: 50px;
 }
-/* --- Preloader Styles --- */
+
+/* Preloader */
 #preloader {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100vh;
-    background: #000; /* Matches your dark theme */
+    background: #050505;
     display: flex;
     justify-content: center;
     align-items: center;
-    z-index: 9999; /* Always on top */
+    z-index: 9999;
     transition: opacity 0.5s ease;
 }
 
 .loader {
-    width: 50px;
-    height: 50px;
-    border: 5px solid rgba(255, 255, 255, 0.1);
-    border-top: 5px solid #ff4d4d; /* Your signature red color */
+    width: 40px;
+    height: 40px;
+    border: 3px solid rgba(255, 77, 77, 0.1);
+    border-top: 3px solid #ff4d4d;
     border-radius: 50%;
-    animation: spin 1s linear infinite;
+    animation: spin 0.8s linear infinite;
 }
 
-@keyframes spin {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
-}
+@keyframes spin { 100% { transform: rotate(360deg); } }
+.loader-fade { opacity: 0; pointer-events: none; }
 
-/* Class to hide the loader */
-.loader-fade {
-    opacity: 0;
-    pointer-events: none;
-}
-
-/* --- Navbar (Shared with Home for consistency) --- */
+/* Navigation */
 .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 20px 8%;
-    background: rgba(255, 255, 255, 0.05);
-    backdrop-filter: blur(12px);
+    background: rgba(255, 255, 255, 0.03);
+    backdrop-filter: blur(15px);
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 100;
 }
 
 .logo { font-size: 24px; font-weight: 800; color: #ff4d4d; letter-spacing: 2px; }
-
 .navbar ul { display: flex; list-style: none; }
-
 .navbar ul li { margin-left: 25px; }
-
 .navbar ul li a { 
     color: #fff; 
     text-decoration: none; 
-    font-size: 14px; 
-    font-weight: 500;
+    font-size: 13px; 
+    font-weight: 600;
+    text-transform: uppercase;
     transition: 0.3s; 
 }
 
-.active { border-bottom: 2px solid #ff4d4d; padding-bottom: 5px; }
+.active { color: #ff4d4d !important; border-bottom: 2px solid #ff4d4d; padding-bottom: 5px; }
 
-/* --- About Me Content Layout --- */
-.about-header { text-align: center; padding: 60px 20px; }
-
-.about-header h1 { font-size: 50px; letter-spacing: 4px; font-weight: 900; }
+/* Grid Layout */
+.about-header { text-align: center; padding: 50px 20px; }
+.about-header h1 { font-size: clamp(30px, 5vw, 50px); letter-spacing: 5px; font-weight: 900; color: #fff; }
+.about-header p { color: #ff4d4d; font-weight: 500; margin-top: 10px; }
 
 .about-grid {
     display: grid;
-    grid-template-columns: 1fr 2fr;
-    gap: 40px;
+    grid-template-columns: 1fr 2.5fr;
+    gap: 30px;
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 5%;
 }
 
-/* Glassmorphism Cards */
+/* Glass Cards */
 .profile-card, .info-section {
-    background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(15px);
-    border: 1px solid rgba(255, 255, 255, 0.15);
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
     padding: 30px;
-    border-radius: 20px;
-    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    border-radius: 15px;
 }
 
-.profile-card { text-align: center; }
-
+.profile-card { text-align: center; height: fit-content; position: sticky; top: 100px; }
 .profile-img-container img {
     width: 100%;
-    max-width: 250px;
-    border-radius: 20px;
-    border: 4px solid #ff4d4d;
+    border-radius: 10px;
+    border: 2px solid #ff4d4d;
     margin-bottom: 20px;
 }
 
-.info-section { margin-bottom: 25px; }
+.location-badge { margin-top: 15px; font-size: 14px; color: #ff4d4d; }
 
-.info-section h2 { color: #ff4d4d; margin-bottom: 20px; font-size: 24px; }
+/* Details Sections */
+.info-section { margin-bottom: 20px; }
+.info-section h2 { color: #ff4d4d; margin-bottom: 15px; font-size: 20px; display: flex; align-items: center; gap: 10px; }
+.info-section p { line-height: 1.6; color: #e0e0e0; }
 
-/* Skills Tags */
-.tags { display: flex; flex-wrap: wrap; gap: 10px; }
+/* Skills List */
+.skills-list { list-style: none; }
+.skills-list li { display: flex; gap: 15px; margin-bottom: 20px; }
+.skills-list i { color: #ff4d4d; font-size: 1.2rem; margin-top: 4px; }
+.skills-list strong { display: block; color: #fff; margin-bottom: 3px; font-size: 16px; }
+.skills-list p { font-size: 14px; color: #b0b0b0; }
 
+/* Tags */
+.tags { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px; }
 .tags span {
-    background: #ff4d4d;
-    padding: 6px 15px;
-    border-radius: 25px;
-    font-size: 13px;
+    background: rgba(255, 77, 77, 0.2);
+    border: 1px solid #ff4d4d;
+    color: #fff;
+    padding: 5px 12px;
+    border-radius: 4px;
+    font-size: 12px;
     font-weight: 600;
-}
-
-.info-section ul { list-style: none; }
-
-.info-section ul li { margin-bottom: 12px; font-size: 16px; display: flex; align-items: center; }
-
-.info-section ul li i { color: #ff4d4d; margin-right: 12px; }
-
-/* --- Mobile Responsiveness --- */
-@media (max-width: 900px) {
-    .about-grid { grid-template-columns: 1fr; }
-    .about-header h1 { font-size: 38px; }
-}
-.footer {
-    width: 100%;
-    padding: 30px 0;
-    background: rgba(0, 0, 0, 0.3); /* Transparent dark background */
-    backdrop-filter: blur(5px);
-    text-align: center;
-    color: rgba(255, 255, 255, 0.7); /* Slightly faded white */
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
-    margin-top: auto; /* Pushes it to the bottom of the container */
-}
-
-.footer p {
-    font-size: 14px;
-    letter-spacing: 1px;
-}
-
-.footer-links {
-    margin-top: 10px;
-}
-
-.footer-links a {
-    color: #ff4d4d;
-    margin: 0 10px;
-    font-size: 18px;
-    text-decoration: none;
     transition: 0.3s;
 }
+.tags span:hover { background: #ff4d4d; transform: translateY(-3px); }
 
-.footer-links a:hover {
-    color: #fff;
-}
-/* Optimization for Mobile Performance */
-@media (max-width: 768px) {
-    .banner, .main-container, .contact-container {
-        /* Standard scroll is much faster for mobile processors */
-        background-attachment: scroll !important;
-        /* Ensures the image doesn't look stretched when scrolling */
-        background-size: cover;
-    }
+/* Footer */
+.footer { text-align: center; padding: 40px 0; background: rgba(0,0,0,0.5); }
+.footer-links { margin-top: 15px; font-size: 22px; }
+.footer-links a { color: #ff4d4d; margin: 0 15px; transition: 0.3s; }
+.footer-links a:hover { color: #fff; }
+
+/* Mobile Optimization */
+@media (max-width: 850px) {
+    .about-grid { grid-template-columns: 1fr; }
+    .profile-card { position: relative; top: 0; }
+    .main-container { background-attachment: scroll; }
 }
